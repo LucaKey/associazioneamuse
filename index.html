@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AMUSE APS — Demo Restyling</title>
+  <meta name="description" content="Demo homepage del restyling strutturale del sito AMUSE APS." />
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+  <!-- Top bar -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__left">
+        <span class="topbar__item">Municipio II — Roma</span>
+        <a class="topbar__item" href="#news">News</a>
+        <a class="topbar__item" href="#eventi">Eventi</a>
+      </div>
+      <div class="topbar__right">
+        <a class="topbar__item topbar__item--strong" href="#area-riservata">Area Riservata</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="#">
+        <img class="brand__logo" src="assets/img/logo-amuse.svg" alt="AMUSE APS" />
+        <div class="brand__text">
+          <span class="brand__name">AMUSE APS</span>
+          <span class="brand__tagline">Amici del Municipio II di Roma</span>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Navigazione principale">
+        <a href="#associazione">Associazione</a>
+        <a href="#vivere">Vivere il Municipio II</a>
+        <a href="#progetti">Progetti</a>
+        <a href="#roma2pass">Roma2pass</a>
+        <a href="#news">News &amp; Eventi</a>
+        <a href="#partecipa">Partecipa</a>
+        <a href="#stampa">Stampa</a>
+        <a href="#trasparenza">Trasparenza</a>
+        <a href="#contatti">Contatti</a>
+      </nav>
+
+      <div class="header__cta">
+        <a class="btn btn--ghost" href="#partecipa">Iscriviti</a>
+        <a class="btn btn--primary" href="#partecipa">Sostieni AMUSE</a>
+      </div>
+
+      <!-- Mobile menu button (demo) -->
+      <button class="navbtn" aria-label="Apri menu" onclick="document.body.classList.toggle('nav-open')">
+        ☰
+      </button>
+    </div>
+
+    <!-- Mobile drawer (demo) -->
+    <div class="drawer">
+      <div class="container drawer__inner">
+        <a href="#associazione" onclick="document.body.classList.remove('nav-open')">Associazione</a>
+        <a href="#vivere" onclick="document.body.classList.remove('nav-open')">Vivere il Municipio II</a>
+        <a href="#progetti" onclick="document.body.classList.remove('nav-open')">Progetti</a>
+        <a href="#roma2pass" onclick="document.body.classList.remove('nav-open')">Roma2pass</a>
+        <a href="#news" onclick="document.body.classList.remove('nav-open')">News &amp; Eventi</a>
+        <a href="#partecipa" onclick="document.body.classList.remove('nav-open')">Partecipa</a>
+        <a href="#stampa" onclick="document.body.classList.remove('nav-open')">Stampa</a>
+        <a href="#trasparenza" onclick="document.body.classList.remove('nav-open')">Trasparenza</a>
+        <a href="#contatti" onclick="document.body.classList.remove('nav-open')">Contatti</a>
+        <hr />
+        <a class="drawer__strong" href="#area-riservata" onclick="document.body.classList.remove('nav-open')">Area Riservata</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SLIDER -->
+  <section class="hero-slider" aria-label="In evidenza">
+    <input class="hs__radio" type="radio" name="hs" id="hs-1" checked>
+    <input class="hs__radio" type="radio" name="hs" id="hs-2">
+    <input class="hs__radio" type="radio" name="hs" id="hs-3">
+    <input class="hs__radio" type="radio" name="hs" id="hs-4">
+
+    <div class="hs">
+      <div class="hs__track">
+
+        <article class="hs__slide" aria-label="Slide 1">
+          <div class="hs__bg" style="background-image:url('assets/img/slide-decoro.jpg');"></div>
+          <div class="hs__overlay" aria-hidden="true"></div>
+          <div class="hs__content">
+            <p class="hs__kicker">Iniziative sul territorio</p>
+            <h1 class="hs__title">Giornate del Decoro Urbano</h1>
+            <p class="hs__subtitle">Un’iniziativa collettiva per prenderci cura del Municipio II.</p>
+            <div class="hs__cta">
+              <a class="btn btn--primary" href="#news">Scopri l’evento</a>
+              <a class="btn btn--ghost" href="#progetti">Progetti attivi</a>
+            </div>
+          </div>
+          <div class="hs__arrows" aria-hidden="true">
+            <label class="hs__arrow hs__arrow--prev" for="hs-4">‹</label>
+            <label class="hs__arrow hs__arrow--next" for="hs-2">›</label>
+          </div>
+        </article>
+
+        <article class="hs__slide" aria-label="Slide 2">
+          <div class="hs__bg" style="background-image:url('assets/img/slide-pietre.jpg');"></div>
+          <div class="hs__overlay" aria-hidden="true"></div>
+          <div class="hs__content">
+            <p class="hs__kicker">Progetti</p>
+            <h2 class="hs__title">Pietre d’Inciampo nel Municipio II</h2>
+            <p class="hs__subtitle">Memoria, cittadinanza e responsabilità: un progetto che lascia un segno.</p>
+            <div class="hs__cta">
+              <a class="btn btn--primary" href="#progetti">Scopri il progetto</a>
+              <a class="btn btn--ghost" href="#partecipa">Partecipa</a>
+            </div>
+          </div>
+          <div class="hs__arrows" aria-hidden="true">
+            <label class="hs__arrow hs__arrow--prev" for="hs-1">‹</label>
+            <label class="hs__arrow hs__arrow--next" for="hs-3">›</label>
+          </div>
+        </article>
+
+        <article class="hs__slide" aria-label="Slide 3">
+          <div class="hs__bg" style="background-image:url('assets/img/slide-roma2pass.jpg');"></div>
+          <div class="hs__overlay" aria-hidden="true"></div>
+          <div class="hs__content">
+            <p class="hs__kicker">Roma2pass</p>
+            <h2 class="hs__title">Percorsi, racconti e audio guide</h2>
+            <p class="hs__subtitle">Contenuti culturali integrati nel sito AMUSE: itinerari, storie e podcast.</p>
+            <div class="hs__cta">
+              <a class="btn btn--primary" href="#roma2pass">Entra in Roma2pass</a>
+              <a class="btn btn--ghost" href="#podcast">Ascolta i racconti</a>
+            </div>
+          </div>
+          <div class="hs__arrows" aria-hidden="true">
+            <label class="hs__arrow hs__arrow--prev" for="hs-2">‹</label>
+            <label class="hs__arrow hs__arrow--next" for="hs-4">›</label>
+          </div>
+        </article>
+
+        <article class="hs__slide" aria-label="Slide 4">
+          <div class="hs__bg" style="background-image:url('assets/img/slide-soci.jpg');"></div>
+          <div class="hs__overlay" aria-hidden="true"></div>
+          <div class="hs__content">
+            <p class="hs__kicker">Partecipa</p>
+            <h2 class="hs__title">Diventa socio, sostieni AMUSE</h2>
+            <p class="hs__subtitle">Iscrizione, 5x1000 e donazioni per supportare progetti e attività.</p>
+            <div class="hs__cta">
+              <a class="btn btn--primary" href="#partecipa">Iscriviti</a>
+              <a class="btn btn--ghost" href="#partecipa">Sostieni AMUSE</a>
+            </div>
+          </div>
+          <div class="hs__arrows" aria-hidden="true">
+            <label class="hs__arrow hs__arrow--prev" for="hs-3">‹</label>
+            <label class="hs__arrow hs__arrow--next" for="hs-1">›</label>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="hs__dots" role="tablist" aria-label="Seleziona slide">
+        <label for="hs-1" class="hs__dot"><span class="sr-only">Slide 1</span></label>
+        <label for="hs-2" class="hs__dot"><span class="sr-only">Slide 2</span></label>
+        <label for="hs-3" class="hs__dot"><span class="sr-only">Slide 3</span></label>
+        <label for="hs-4" class="hs__dot"><span class="sr-only">Slide 4</span></label>
+      </div>
+    </div>
+  </section>
+
+  <!-- Associazione (teaser) -->
+  <section id="associazione" class="section">
+    <div class="container grid-2">
+      <div>
+        <h2>Chi siamo</h2>
+        <p class="lead">
+          AMUSE APS è un’associazione di cittadini attiva nel Municipio II di Roma. Promuoviamo partecipazione,
+          decoro urbano, cultura e memoria attraverso progetti concreti e collaborazione con il territorio.
+        </p>
+        <div class="actions">
+          <a class="btn btn--primary" href="#">Scopri l’associazione</a>
+          <a class="btn btn--ghost" href="#trasparenza">Trasparenza</a>
+        </div>
+      </div>
+      <div class="card card--media">
+        <div class="media media--placeholder">FOTO ATTIVITÀ / TERRITORIO</div>
+        <div class="card__body">
+          <p><strong>In evidenza:</strong> missione, valori, organi e collaborazioni in un’unica pagina ordinata e leggibile.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pilastri -->
+  <section class="section section--muted">
+    <div class="container">
+      <h2>I nostri pilastri</h2>
+      <p class="sub">Quattro aree chiave che guidano il lavoro dell’associazione sul territorio.</p>
+
+      <div class="cards">
+        <div class="card">
+          <div class="card__icon">🌿</div>
+          <h3>Decoro e ambiente</h3>
+          <p>Azioni concrete per la cura degli spazi pubblici e del verde urbano.</p>
+        </div>
+        <div class="card">
+          <div class="card__icon">🏛️</div>
+          <h3>Memoria e cultura</h3>
+          <p>Iniziative che valorizzano storia, luoghi e memoria collettiva.</p>
+        </div>
+        <div class="card">
+          <div class="card__icon">🤝</div>
+          <h3>Partecipazione</h3>
+          <p>Ascolto, collaborazione e proposte per migliorare la qualità della vita.</p>
+        </div>
+        <div class="card">
+          <div class="card__icon">🎓</div>
+          <h3>Scuole e comunità</h3>
+          <p>Progetti educativi e attività che coinvolgono studenti e cittadini.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vivere Municipio II -->
+  <section id="vivere" class="section">
+    <div class="container">
+      <div class="section__head">
+        <h2>Vivere il Municipio II</h2>
+        <p class="sub">La pagina territoriale: quartieri, contesto e informazioni istituzionali, senza dispersione.</p>
+      </div>
+
+      <div class="cards cards--3">
+        <div class="card card--media">
+          <div class="media media--placeholder">IMMAGINE TERRITORIO</div>
+          <div class="card__body">
+            <h3>Il territorio</h3>
+            <p>Una cornice chiara e istituzionale sul Municipio II.</p>
+            <a class="link" href="#">Scopri il territorio →</a>
+          </div>
+        </div>
+        <div class="card card--media">
+          <div class="media media--placeholder">IMMAGINI QUARTIERI</div>
+          <div class="card__body">
+            <h3>I quartieri</h3>
+            <p>Card visive e navigazione semplice tra le aree del Municipio.</p>
+            <a class="link" href="#">Esplora i quartieri →</a>
+          </div>
+        </div>
+        <div class="card card--media">
+          <div class="media media--placeholder">INFO ISTITUZIONALI</div>
+          <div class="card__body">
+            <h3>Servizi e istituzioni</h3>
+            <p>Accesso ordinato ai riferimenti utili e al sito istituzionale.</p>
+            <a class="link" href="#">Vai alle informazioni →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Progetti -->
+  <section id="progetti" class="section section--muted">
+    <div class="container">
+      <div class="section__head">
+        <h2>Progetti in evidenza</h2>
+        <p class="sub">Una pagina HUB con card visuali: progetti attivi + archivio progetti conclusi.</p>
+      </div>
+
+      <div class="cards cards--3">
+        <article class="card card--project">
+          <div class="media media--placeholder">FOTO PROGETTO</div>
+          <div class="card__body">
+            <h3>Pietre d’Inciampo</h3>
+            <p>Memoria e cittadinanza nel Municipio II.</p>
+            <a class="btn btn--primary btn--sm" href="#">Scopri</a>
+          </div>
+        </article>
+
+        <article class="card card--project">
+          <div class="media media--placeholder">FOTO PROGETTO</div>
+          <div class="card__body">
+            <h3>Dona un Albero</h3>
+            <p>Verde urbano e comunità: un gesto concreto.</p>
+            <a class="btn btn--primary btn--sm" href="#">Scopri</a>
+          </div>
+        </article>
+
+        <article class="card card--project">
+          <div class="media media--placeholder">FOTO PROGETTO</div>
+          <div class="card__body">
+            <h3>SegnaliAMO</h3>
+            <p>Segnalazioni e dialogo per migliorare il territorio.</p>
+            <a class="btn btn--primary btn--sm" href="#">Scopri</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="actions actions--center">
+        <a class="btn btn--ghost" href="#">Tutti i progetti</a>
+        <a class="btn btn--ghost" href="#">Archivio progetti conclusi</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roma2pass -->
+  <section id="roma2pass" class="section">
+    <div class="container">
+      <div class="section__head">
+        <h2>Roma2pass</h2>
+        <p class="sub">Il progetto culturale integrato: percorsi, scuole, racconti e audio guide.</p>
+      </div>
+
+      <div class="cards cards--4">
+        <div class="card">
+          <h3>Percorsi</h3>
+          <p>Itinerari tematici per esplorare il territorio.</p>
+          <a class="link" href="#">Apri →</a>
+        </div>
+        <div class="card">
+          <h3>Scuole</h3>
+          <p>Attività educative e catalogo proposte.</p>
+          <a class="link" href="#">Apri →</a>
+        </div>
+        <div class="card">
+          <h3>Racconti</h3>
+          <p>Storie e memorie del Flâneur.</p>
+          <a class="link" href="#">Apri →</a>
+        </div>
+        <div class="card">
+          <h3>Audio &amp; Podcast</h3>
+          <p>Ascolto integrato nel sito, senza uscire.</p>
+          <a class="link" href="#podcast">Vai ai podcast →</a>
+        </div>
+      </div>
+
+      <!-- Podcast embed (placeholder) -->
+      <div id="podcast" class="embed">
+        <div class="embed__head">
+          <h3>Ascolta gli ultimi episodi</h3>
+          <p class="sub">Embed Spotify/Loquis (qui inserirai il codice ufficiale del player).</p>
+        </div>
+        <div class="embed__box">
+          INCOLLA QUI L’EMBED (Spotify / Loquis)
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- News & Eventi -->
+  <section id="news" class="section section--muted">
+    <div class="container">
+      <div class="section__head">
+        <h2>News &amp; Eventi</h2>
+        <p class="sub">Sezione dinamica: le ultime notizie e i prossimi appuntamenti.</p>
+      </div>
+
+      <div class="grid-2">
+        <div>
+          <h3>Ultime news</h3>
+          <div class="list" id="newsList">
+            <!-- Popolabile via JS/JSON -->
+            <a class="list__item" href="#">
+              <span class="list__meta">12 Mar 2026</span>
+              <span class="list__title">Esempio news: aggiornamento progetti sul territorio</span>
+            </a>
+            <a class="list__item" href="#">
+              <span class="list__meta">02 Mar 2026</span>
+              <span class="list__title">Esempio news: comunicazione ai soci</span>
+            </a>
+            <a class="list__item" href="#">
+              <span class="list__meta">18 Feb 2026</span>
+              <span class="list__title">Esempio news: risultati iniziativa decoro</span>
+            </a>
+          </div>
+          <a class="btn btn--ghost btn--sm" href="#">Tutte le news</a>
+        </div>
+
+        <div id="eventi">
+          <h3>Prossimi eventi</h3>
+          <div class="list" id="eventsList">
+            <a class="list__item" href="#">
+              <span class="list__meta">Sab 23 Mar — Villa Glori</span>
+              <span class="list__title">I Martedì di AMUSE: incontro e confronto</span>
+            </a>
+            <a class="list__item" href="#">
+              <span class="list__meta">Dom 07 Apr — Quartiere Trieste</span>
+              <span class="list__title">Giornata del Decoro: azione collettiva</span>
+            </a>
+            <a class="list__item" href="#">
+              <span class="list__meta">Ven 19 Apr — Municipio II</span>
+              <span class="list__title">Presentazione progetto e rete territoriale</span>
+            </a>
+          </div>
+          <a class="btn btn--ghost btn--sm" href="#">Calendario eventi</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partecipa -->
+  <section id="partecipa" class="section">
+    <div class="container">
+      <div class="section__head">
+        <h2>Partecipa</h2>
+        <p class="sub">Diventa socio, sostieni AMUSE o partecipa attivamente ai progetti sul territorio.</p>
+      </div>
+
+      <div class="cards cards--3">
+        <div class="card card--cta">
+          <h3>Diventa socio</h3>
+          <p>Iscrizione semplice e vantaggi per partecipare alla vita associativa.</p>
+          <a class="btn btn--primary btn--sm" href="#">Iscriviti</a>
+        </div>
+        <div class="card card--cta">
+          <h3>Sostieni AMUSE</h3>
+          <p>Donazioni e 5x1000 per supportare iniziative e progetti.</p>
+          <a class="btn btn--primary btn--sm" href="#">Dona</a>
+        </div>
+        <div class="card card--cta">
+          <h3>Partecipa attivamente</h3>
+          <p>Proponi un’idea, collabora e partecipa agli eventi sul territorio.</p>
+          <a class="btn btn--primary btn--sm" href="#">Scopri come</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stampa -->
+  <section id="stampa" class="section section--muted">
+    <div class="container">
+      <div class="section__head">
+        <h2>Stampa</h2>
+        <p class="sub">Comunicati, rassegna stampa, interviste e kit stampa: una sezione più ordinata e professionale.</p>
+      </div>
+
+      <div class="cards cards--4">
+        <div class="card">
+          <h3>Comunicati</h3>
+          <p>Elenco ordinato con titoli e abstract.</p>
+          <a class="link" href="#">Apri →</a>
+        </div>
+        <div class="card">
+          <h3>Rassegna stampa</h3>
+          <p>Articoli e citazioni: niente link confusi.</p>
+          <a class="link" href="#">Apri →</a>
+        </div>
+        <div class="card">
+          <h3>Interviste</h3>
+          <p>Audio/video integrati (embed).</p>
+          <a class="link" href="#">Apri →</a>
+        </div>
+        <div class="card">
+          <h3>Kit stampa</h3>
+          <p>Brochure, loghi, materiali scaricabili.</p>
+          <a class="link" href="#">Apri →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trasparenza -->
+  <section id="trasparenza" class="section">
+    <div class="container">
+      <div class="section__head">
+        <h2>Trasparenza</h2>
+        <p class="sub">Documentazione istituzionale raccolta e facilmente consultabile.</p>
+      </div>
+
+      <div class="cards cards--4">
+        <div class="card">
+          <h3>Statuto</h3>
+          <p>Documento ufficiale e riferimenti.</p>
+          <a class="link" href="#">Apri →</a>
+        </div>
+        <div class="card">
+          <h3>Bilanci</h3>
+          <p>Elenco per anno, download chiari.</p>
+          <a class="link" href="#">Apri →</a>
+        </div>
+        <div class="card">
+          <h3>Regolamenti</h3>
+          <p>Regole e protocolli di progetto.</p>
+          <a class="link" href="#">Apri →</a>
+        </div>
+        <div class="card">
+          <h3>Sistema qualità</h3>
+          <p>Trasparenza operativa e processi.</p>
+          <a class="link" href="#">Apri →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contatti -->
+  <section id="contatti" class="section section--muted">
+    <div class="container grid-2">
+      <div>
+        <h2>Contattaci</h2>
+        <p class="sub">Un punto di dialogo con il territorio: richieste, segnalazioni e collaborazioni.</p>
+
+        <form class="form" onsubmit="event.preventDefault(); alert('Demo: invio non attivo');">
+          <label>
+            <span>Nome</span>
+            <input type="text" name="name" placeholder="Il tuo nome" required>
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" placeholder="nome@email.it" required>
+          </label>
+          <label>
+            <span>Oggetto</span>
+            <select name="subject">
+              <option>Informazioni generali</option>
+              <option>Segnalazione</option>
+              <option>Proposta progetto</option>
+              <option>Stampa</option>
+              <option>Altro</option>
+            </select>
+          </label>
+          <label>
+            <span>Messaggio</span>
+            <textarea name="message" rows="5" placeholder="Scrivi qui..." required></textarea>
+          </label>
+          <button class="btn btn--primary" type="submit">Invia</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <h3>Contatti diretti</h3>
+        <p><strong>Email:</strong> info@associazioneamuse.it</p>
+        <p><strong>PEC:</strong> …</p>
+        <p><strong>Sede legale:</strong> …</p>
+        <p><strong>Codice fiscale:</strong> …</p>
+
+        <hr class="hr" />
+
+        <h3 id="area-riservata">Area Riservata</h3>
+        <p>Accesso per Soci e Consiglio Direttivo (demo).</p>
+        <a class="btn btn--ghost btn--sm" href="#">Vai al login</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <strong>AMUSE APS</strong>
+        <p class="small">Associazione di cittadini attiva nel Municipio II di Roma.</p>
+      </div>
+      <div>
+        <strong>Sezioni</strong>
+        <ul>
+          <li><a href="#progetti">Progetti</a></li>
+          <li><a href="#roma2pass">Roma2pass</a></li>
+          <li><a href="#news">News &amp; Eventi</a></li>
+          <li><a href="#partecipa">Partecipa</a></li>
+        </ul>
+      </div>
+      <div>
+        <strong>Contatti</strong>
+        <ul>
+          <li><a href="#contatti">Contattaci</a></li>
+          <li><a href="#area-riservata">Area Riservata</a></li>
+        </ul>
+      </div>
+      <div>
+        <strong>Legale</strong>
+        <ul>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Cookie</a></li>
+          <li><a href="#">Note legali</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <span class="small">© AMUSE APS — Demo restyling</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
