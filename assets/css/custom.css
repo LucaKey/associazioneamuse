@@ -1,0 +1,222 @@
+/* ==========================
+   DESKTOP ONLY (>=1200px)
+   ========================== */
+@media (min-width: 1200px) {
+
+  /* 1) Togli spazio laterale e allinea tutto meglio */
+  #header-sticky.header-1 .container-fluid{
+    padding-left: 20px;   /* prova 10px se vuoi ancora più a sinistra */
+    padding-right: 20px;
+  }
+
+  /* 2) Header: distribuzione corretta e niente spazi “strani” */
+  #header-sticky.header-1 .header-main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+  }
+
+  /* 3) Logo più “compatto” (niente larghezze inutili) */
+  #header-sticky.header-1 .header-left{
+    flex: 0 0 auto;
+    margin-right: 10px; /* riduci/azzera se vuoi */
+  }
+
+  #header-sticky.header-1 .logo{
+    margin: 0;
+    padding: 0;
+  }
+
+  #header-sticky.header-1 .header-logo img{
+    height: 46px;        /* regola a piacere */
+    width: auto;
+    display: block;
+  }
+
+  /* 4) Menu in una riga: no wrap e spazi ridotti */
+  #header-sticky.header-1 .mean__menu-wrapper{
+    flex: 1 1 auto;
+    min-width: 0;        /* IMPORTANTISSIMO: evita overflow strani */
+  }
+
+  #header-sticky.header-1 .main-menu nav > ul{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center; /* oppure flex-start se lo vuoi più a sinistra */
+    gap: 22px;              /* prova 18px se serve più spazio */
+  }
+
+  #header-sticky.header-1 .main-menu nav > ul > li > a{
+    white-space: nowrap;
+    font-size: 16px;        /* prova 15px se ancora non ci sta */
+    padding: 0 6px;         /* riduce l’ingombro */
+  }
+
+  /* 5) Area destra (search + dona) un po’ più compatta */
+  #header-sticky.header-1 .header-right{
+    flex: 0 0 auto;
+    gap: 14px;
+  }
+
+  #header-sticky.header-1 .theme-btn{
+    padding: 12px 18px;     /* riduci se vuoi */
+    font-size: 15px;
+    white-space: nowrap;
+  }
+}
+/* ==========================
+   FIX MENU che va sopra al logo (DESKTOP)
+   ========================== */
+@media (min-width: 1200px) {
+
+  /* Header in flex "pulito" */
+  #header-sticky.header-1 .header-main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+  }
+
+  /* Forza il logo a occupare spazio (no absolute) */
+  #header-sticky.header-1 .header-left{
+    position: static !important;
+    flex: 0 0 auto;
+    z-index: 5;
+  }
+
+  #header-sticky.header-1 .logo,
+  #header-sticky.header-1 .header-logo{
+    position: static !important;
+  }
+
+  /* Forza il menu a NON essere absolute e a stare centrato verticalmente */
+  #header-sticky.header-1 .mean__menu-wrapper,
+  #header-sticky.header-1 .main-menu,
+  #header-sticky.header-1 .main-menu nav{
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+  }
+
+  #header-sticky.header-1 .mean__menu-wrapper{
+    flex: 1 1 auto;
+    min-width: 0;      /* importantissimo */
+    display: flex;
+    align-items: center;
+  }
+
+  /* Menu: tutto su una riga e NON va sotto al logo */
+  #header-sticky.header-1 .main-menu nav > ul{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;  /* parte dopo il logo */
+    gap: 14px;                    /* spazio tra voci */
+    margin: 0;
+    padding-left: 18px;           /* “stacco” dal logo: aumenta/diminuisci */
+  }
+
+  /* Evita regole vecchie tipo float/margini strani */
+  #header-sticky.header-1 .main-menu nav > ul > li{
+    float: none !important;
+    margin: 0 !important;
+  }
+
+  #header-sticky.header-1 .main-menu nav > ul > li > a{
+    white-space: nowrap;
+    padding: 0 3px;
+  }
+}
+@media (max-width: 991px) {
+  .hero-slider .swiper-slide::before,
+  .hero-area .swiper-slide::before,
+  .hero-section .swiper-slide::before {
+    inset: -2px; /* copre eventuali micro-gap */
+  }
+}
+/* il contenitore deve essere reference per l'assoluto */
+.faq-image { position: relative; }
+
+/* l'immagine non deve “coprire” il link */
+.faq-image img { display:block; position: relative; z-index: 1; }
+
+/* bottone play sopra a tutto e cliccabile */
+.faq-image .video-btn.video-popup{
+  position: absolute;
+  z-index: 5;
+  inset: 0;
+  margin: auto;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+}
+
+/* se esiste un overlay pseudo-elemento che blocca i click */
+.faq-image::before,
+.faq-image::after{
+  pointer-events: none;
+}
+/* ==========================
+   MENU HOVER - DESKTOP
+   ========================== */
+:root{
+  --amuse-green: #0B4E3D;
+  --amuse-yellow: #FFC107;
+}
+
+@media (min-width: 992px){
+
+  /* Link base */
+  #header-sticky .main-menu nav > ul > li > a{
+    color: var(--amuse-green);
+    transition: color .2s ease, background-color .2s ease;
+  }
+
+  /* ---- STATO 1: header giallo (iniziale) -> hover bianco ---- */
+  #header-sticky .main-menu nav > ul > li:hover > a,
+  #header-sticky .main-menu nav > ul > li > a:hover{
+    color: #fff !important;
+  }
+
+  /* ---- STATO 2: header sticky bianco -> hover giallo ----
+     Qui metto più classi "comuni" dei template per lo sticky.
+     Ne basta UNA che corrisponda al tuo header quando scrolli.
+  */
+  #header-sticky.sticky .main-menu nav > ul > li:hover > a,
+  #header-sticky.is-sticky .main-menu nav > ul > li:hover > a,
+  #header-sticky.fixed .main-menu nav > ul > li:hover > a,
+  #header-sticky.sticky-on .main-menu nav > ul > li:hover > a,
+  #header-sticky.header-sticky .main-menu nav > ul > li:hover > a,
+  #header-sticky.sticky .main-menu nav > ul > li > a:hover,
+  #header-sticky.is-sticky .main-menu nav > ul > li > a:hover,
+  #header-sticky.fixed .main-menu nav > ul > li > a:hover,
+  #header-sticky.sticky-on .main-menu nav > ul > li > a:hover,
+  #header-sticky.header-sticky .main-menu nav > ul > li > a:hover{
+    color: var(--amuse-yellow) !important;
+  }
+
+  /* (opzionale) sottolineatura elegante su hover */
+  #header-sticky .main-menu nav > ul > li > a{
+    position: relative;
+  }
+  #header-sticky .main-menu nav > ul > li > a::after{
+    content:"";
+    position:absolute;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    height: 2px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .2s ease;
+  }
+  #header-sticky .main-menu nav > ul > li:hover > a::after{
+    transform: scaleX(1);
+  }
+}
