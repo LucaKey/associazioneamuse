@@ -220,3 +220,23 @@
     transform: scaleX(1);
   }
 }
+/* ==========================
+   LOGO SVG - FIX MOBILE
+   ========================== */
+@media (max-width: 991px) {
+
+  /* Contenitore logo */
+  #header-sticky .logo,
+  #header-sticky .header-logo {
+    display: flex;
+    align-items: center;
+  }
+
+  /* Immagine logo */
+  #header-sticky .header-logo img{
+    height: 44px;        /* prova 38–50 */
+    width: auto;
+    max-width: 180px;    /* IMPORTANTISSIMO: evita “mega logo” */
+    display: block;
+  }
+}
