@@ -4448,11 +4448,11 @@ span {
 }
 
 .footer-widget-wrapper {
-  padding: 90px 0 70px;
+  padding: 40px 0 70px;
 }
 @media (max-width: 1399px) {
   .footer-widget-wrapper {
-    padding: 0 0 70px;
+    padding: 40px 0 70px;
   }
 }
 @media (max-width: 1600px) {
@@ -9037,16 +9037,16 @@ span {
 }
 
 .section-padding {
-  padding: 120px 0;
+  padding: 20px 0;
 }
 @media (max-width: 1199px) {
   .section-padding {
-    padding: 100px 0;
+    padding: 20px 0;
   }
 }
 @media (max-width: 991px) {
   .section-padding {
-    padding: 80px 0;
+    padding: 20px 0;
   }
 }
 

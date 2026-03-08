@@ -296,4 +296,142 @@
 .offcanvas-cta .theme-btn{
   width: 100%;
   justify-content: center;
+}/* =========================================================
+   CONTACT SECTION (Home) - VERSIONE DEFINITIVA
+   - Sfondo bianco ovunque
+   - Titolo + paragrafo neri
+   - Immagine NON tagliata su desktop (reset maschere/animazioni)
+   ========================================================= */
+
+/* 1) Sfondo bianco (se il template usa wrapper e pseudo-elementi) */
+.contact-section,
+.contact-section .container-fluid,
+.contact-section .contact-wrapper,
+.contact-section .row,
+.contact-section [class*="col-"],
+.contact-section .contact-content{
+  background: #fff !important;
+}
+
+.contact-section::before,
+.contact-section::after,
+.contact-section .contact-wrapper::before,
+.contact-section .contact-wrapper::after,
+.contact-section .contact-content::before,
+.contact-section .contact-content::after{
+  content: none !important;
+  display: none !important;
+  background: transparent !important;
+}
+
+/* 2) Testi: solo quelli richiesti */
+.contact-section .section-title .sec-title,
+.contact-section .section-title .sec-title span,
+.contact-section p.text{
+  color: #000 !important;
+}
+
+/* 3) Immagine: comportamento base (vale sempre) */
+.contact-section .contact-image{
+  position: relative;
+}
+
+/* 4) Desktop: elimina qualunque “crop” dovuto a maschere/scale */
+@media (min-width: 992px){
+
+  /* Se bootstrap allinea in basso, meglio stretch per evitare box strani */
+  .contact-section .row.align-items-end{
+    align-items: stretch !important;
+  }
+
+  /* Il wrapper dell’immagine spesso ha overflow/clip-path per animazioni */
+  .contact-section .contact-image,
+  .contact-section .contact-image.img-custom-anim-left{
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+
+    clip-path: none !important;
+    -webkit-clip-path: none !important;
+
+    transform: none !important;
+    display: block !important;
+  }
+
+  /* Reset totale dell’IMG: niente absolute/scale/crop */
+  .contact-section .contact-image img{
+    position: static !important;
+    transform: none !important;
+
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100% !important;
+    max-height: none !important;
+
+    object-fit: contain !important;
+    display: block !important;
+  }
+}
+/* ==========================
+   Single Post Home Section
+   ========================== */
+.single-post-home{
+  background: #f3f3f3;   
+}
+
+.single-post-home__inner{
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: center;
+ 
+}
+
+.single-post-home__media{
+  margin-bottom: 28px;
+}
+
+.single-post-home__media img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 18px;
+}
+
+.single-post-home__title{
+  color: #0B4E3D;                /* verde AMUSE */
+  margin-bottom: 14px;
+  line-height: 1.1;
+}
+
+.single-post-home__title span{
+  color: #FFC107;                /* giallo AMUSE (solo le iniziali) */
+}
+
+.single-post-home__text{
+  color: #222;
+  max-width: 720px;
+  margin: 0 auto 22px auto;
+  line-height: 1.6;
+}
+
+/* CTA centrata */
+.single-post-home__cta .theme-btn{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Spaziature mobile */
+@media (max-width: 575px){
+  .single-post-home__title{
+    font-size: 34px; /* se il template la rende troppo grande */
+  }
+}
+.single-post-home{
+  margin-top: 20px;   /* regola: 40–100 a seconda di quanto vuoi */
+}
+/* Spazio sopra la sezione "counter-section" */
+.counter-section{
+  margin-top: 60px;          /* regola 40–100 */
 }
