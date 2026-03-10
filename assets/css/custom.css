@@ -435,3 +435,171 @@
 .counter-section{
   margin-top: 60px;          /* regola 40–100 */
 }
+/* ==========================
+   FIX LOGO SVG su TABLET (iPad 1024) + mobile fino a 1199px
+   ========================== */
+@media (max-width: 1199px){
+
+  /* logo header */
+  #header-sticky .header-logo img{
+    height: 44px;        /* regola 40–50 */
+    width: auto;
+    max-width: 190px;    /* evita logo gigante */
+    display: block;
+  }
+
+  /* logo offcanvas (menu mobile) */
+  .offcanvas__logo img{
+    height: 46px;
+    width: auto;
+    max-width: 200px;
+    display: block;
+  }
+}
+/* ==========================
+   iPad Pro / Tablet large (992–1199)
+   - Nasconde il menu desktop
+   - Forza hamburger visibile e cliccabile
+   - Evita tagli (overflow/height)
+   ========================== */
+@media (min-width: 992px) and (max-width: 1199px){
+
+  /* niente tagli nell'header */
+  #header-sticky,
+  #header-sticky .container-fluid,
+  #header-sticky .mega-menu-wrapper,
+  #header-sticky .header-main{
+    overflow: visible !important;
+    height: auto !important;
+  }
+
+  /* layout header "pulito" */
+  #header-sticky .header-main{
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+  }
+
+  /* su tablet: il menu desktop NON deve comparire */
+  #header-sticky .mean__menu-wrapper{
+    display: none !important;
+  }
+
+  /* il blocco a destra deve restare visibile */
+  #header-sticky .header-right{
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 12px;
+    flex: 0 0 auto !important;
+  }
+
+  /* se il bottone "Area Soci" ruba spazio, lo nascondiamo su tablet */
+  #header-sticky .header-button{
+    display: none !important;
+  }
+
+  /* HAMBURGER: FORZA visibilità + posizione */
+  #header-sticky .header__hamburger{
+    display: flex !important;
+    align-items: center !important;
+    position: absolute !important;
+    right: 18px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    z-index: 9999 !important;
+  }
+
+  #header-sticky .sidebar__toggle{
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+  }
+
+  #header-sticky .sidebar__toggle i{
+    font-size: 24px !important;
+    line-height: 1 !important;
+  }
+
+  /* per sicurezza: evita che il logo "spinga" troppo */
+  #header-sticky .header-left{
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+  }
+}/* =========================================================
+   FIX iPad Pro / Tablet (<=1199px)
+   - Il menu desktop sparisce (MeanMenu) -> serve hamburger/offcanvas
+   - Forziamo hamburger + header-right visibili e cliccabili
+   ========================================================= */
+@media (max-width: 1199px){
+
+  /* evita che l’header tagli elementi interni */
+  #header-sticky.header-1,
+  #header-sticky.header-1 .container-fluid,
+  #header-sticky.header-1 .mega-menu-wrapper,
+  #header-sticky.header-1 .header-main{
+    overflow: visible !important;
+    height: auto !important;
+  }
+
+  /* layout header stabile */
+  #header-sticky.header-1 .header-main{
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 12px 0 !important;
+  }
+
+  /* su <=1199 NON mostrare il menu desktop nella barra */
+  #header-sticky.header-1 .mean__menu-wrapper{
+    display: none !important;
+  }
+
+  /* forza header-right visibile (se il tema lo nasconde) */
+  #header-sticky.header-1 .header-right{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 12px !important;
+    position: relative !important;
+    z-index: 9999 !important;
+  }
+
+  /* (opzionale) nascondi Area Soci su tablet, lascia solo hamburger */
+  #header-sticky.header-1 .header-button{
+    display: none !important;
+  }
+
+  /* HAMBURGER: forza sempre visibile */
+  #header-sticky.header-1 .header__hamburger{
+    display: flex !important;
+    align-items: center !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    position: relative !important;
+    z-index: 10000 !important;
+  }
+
+  #header-sticky.header-1 .sidebar__toggle{
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 46px !important;
+    height: 46px !important;
+    border-radius: 12px !important;
+    background: rgba(255,255,255,.25) !important; /* così lo vedi sul giallo */
+  }
+
+  #header-sticky.header-1 .sidebar__toggle i{
+    font-size: 24px !important;
+    line-height: 1 !important;
+    color: #0B4E3D !important;
+  }
+}
